@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container p-5">
+        <table class="table table-stripped">
+            <thead class="bg-dark text-white">
+                <tr th:>
+                    <th scope="col"> Id </th>
+                    <th scope="col"> Name </th>
+                    <th scope="col"> code </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${products}">
+                    <td th:text="${product.id}"> </td>
+                    <td th:text="${product.name}"> </td>
+                    <td th:text="${product.code}"> </td>
+                </tr>
+                <td> <a class="btn btn-sm btn-primary" href=""> Edit </a>
+                    <a class="btn btn-sm btn-danger" href=""> Delete </a>
+                </td>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
